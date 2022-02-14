@@ -77,7 +77,7 @@ resource "google_compute_instance" "gw" {
       "sudo sh -c 'echo #\\!/bin/sh > /etc/network/if-pre-up.d/iptablesrestore'",
       "sudo sh -c 'echo iptables-restore /etc/iptables.rules >> /etc/network/if-pre-up.d/iptablesrestore'",
       "sudo sh -c 'echo exit 0 >> /etc/network/if-pre-up.d/iptablesrestore'",
-      "sudh chmod +x /etc/network/if-pre-up.d/iptablesrestore",
+      "sudo chmod +x /etc/network/if-pre-up.d/iptablesrestore",
 
       "sudo sh -c 'echo #!/bin/sh > /etc/network/if-pre-up.d/iptablesrestore'",
       "sudo sh -c 'echo net.ipv4.ip_forward=1 > /etc/sysctl.d/20-ipv4_forward.conf'",
